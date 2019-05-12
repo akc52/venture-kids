@@ -50,7 +50,7 @@
     </header>
   
 
-		<main>		
+		<main class="volunteer-page">		
 			<div class="content-wrap--small">
 				<section class="our-mission__section">
 					<h2 class="our-mission__header">Our Mission</h2>
@@ -99,54 +99,57 @@
         </section>
       </div><!-- content-wrap--small -->
 
-      <section class="become-volunteer__section content-wrap">
-        <h2>Become a volunteer</h2>
-        <h3>Why volunter with us?</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <h3>Description:</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <section class="become-volunteer__section">
+        <div class="content-wrap--small">
+          <h2>Become a volunteer</h2>
+          <h3>Why volunter with us?</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h3>Description:</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
       </section>
 
+      <div class="content-wrap--small">
+        <form action="https://formspree.io/alyssa.ciccone@gmail.com" method="POST" class="volunteers-form">
+          <fieldset>
+            <legend>Registration Form:</legend>
+              <label for="first-name">First Name:</label>
+              <input name="first-name" type="text" placeholder="First name" required>
+              
+              <label for="last-name">Last Name:</label>
+              <input name="last-name" type="text" placeholder="Last name" required>
 
-      <form action="https://formspree.io/alyssa.ciccone@gmail.com" method="POST" class="content-wrap--small volunteers-form">
-        <fieldset>
-          <legend>Registration Form:</legend>
-            <label for="first-name">First Name:</label>
-            <input name="first-name" type="text" placeholder="First name" required>
-            
-            <label for="last-name">Last Name:</label>
-            <input name="last-name" type="text" placeholder="Last name" required>
+              <label for="email">Email:</label>
+              <input name="email" type="email" placeholder="Email">
 
-            <label for="email">Email:</label>
-            <input name="email" type="email" placeholder="Email">
+              <label for="phone-number">Phone Number:</label>
+              <input name="phone-number" type="tel" placeholder="Phone number" >
 
-            <label for="phone-number">Phone Number:</label>
-            <input name="phone-number" type="tel" placeholder="Phone number" >
+              <h3>What's subject(s) would you like to teach?</h3>
+              <input type="checkbox" value="code">
+              <label for="code">Web Development (HTML/CSS or Javascript)</label><br>
 
-            <h3>What's subject(s) would you like to teach?</h3>
-            <input type="checkbox" value="code">
-            <label for="code">Web Development (HTML/CSS or Javascript)</label><br>
+              <input type="checkbox" value="financial-literacy">
+              <label for="financial-literacy">Financial Literacy</label><br>
 
-            <input type="checkbox" value="financial-literacy">
-            <label for="financial-literacy">Financial Literacy</label><br>
+              <input type="checkbox" value="growth-hacking">
+              <label for="growth-hacking">Growth Hacking</label><br>
 
-            <input type="checkbox" value="growth-hacking">
-            <label for="growth-hacking">Growth Hacking</label><br>
+              <input type="checkbox" value="product-building">
+              <label for="product-building">Product Building</label><br>
+              
+              <label for="other">Other: </label><input type="text" value="Other" class="input--other"><br>
 
-            <input type="checkbox" value="product-building">
-            <label for="product-building">Product Building</label><br>
-            
-            <label for="other">Other: </label><input type="text" value="other"><br>
+              <label for="additional-skills">Please describe and additional skills or experience you may have that help out program: </label>
+              <textarea name="additional-skills" placeholder=""></textarea>
 
-            <label for="additional-skills">Please describe and additional skills or experience you may have that help out program: </label>
-            <textarea name="additional-skills" placeholder=""></textarea>
+              <label for="how_did_you_hear">Please indicate how you heard about this volunteer opportunity: </label>
+              <textarea name="how_did_you_hear" placeholder=""></textarea>
 
-            <label for="how_did_you_hear">Please indicate how you heard about this volunteer opportunity: </label>
-            <textarea name="how_did_you_hear" placeholder=""></textarea>
-
-            <input name="submit" type="submit" value="SUBMIT">
-        </fieldset>
-      </form><!-- content-wrap -->
+              <input name="submit" type="submit" value="SUBMIT">
+          </fieldset>
+        </form>
+      </div><!-- content-wrap -->
       
 		</main>
 	</div>

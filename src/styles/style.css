@@ -19,6 +19,7 @@
   --color-white: #FFF;
   --color-blue: #2E688C;
   
+  --color-bg-header: rgba(255, 255, 255, 0.9);
   --color-bg-dark: #40302C;
   --color-bg: var(--color-white);
   --color-bg-light: #F2F2F2;
@@ -55,7 +56,7 @@ h2 {
   margin: 1em 0;
 }
 
-h3, legend {
+h3 {
   font-family: "avenirLight", sans-serif;
   font-size: 2.6em;
   line-height: 1.0em;
@@ -65,6 +66,13 @@ h3, legend {
 h4 {
   font-family: "avenirLight", sans-serif;
   font-size: 1.8em;
+  line-height: 1.0em;
+  margin: 1em 0;
+}
+
+legend {
+  font-family: "avenirBold", sans-serif;
+  font-size: 2.6em;
   line-height: 1.0em;
   margin: 1em 0;
 }
@@ -92,23 +100,35 @@ time {
 }
 
 form {
-  
+  margin: 6em auto;
 }
 
 label {
   /*display: none;*/
 }
 
-input[type="date"], 
-input[type="email"], 
-input[type="tel"], 
-input[type="text"], 
+[type="date"], 
+[type="email"], 
+[type="tel"], 
+[type="text"], 
 textarea {
   font-family: 'avenirLight', sans-serif;
   display: block;
   width: 100%;
   margin-bottom: 1em;
+  padding: 0.4em;
 }
+
+.text--bold {
+  font-family: "avenirBold", sans-serif;
+}
+
+
+/*
+
+  PAGE LAYOUT
+  
+*/
 
 .page-container {
   position: relative;
@@ -128,23 +148,10 @@ textarea {
   box-shadow: var(--border-shadow);
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  height: var(--footer-height);
+.program-page, 
+.volunteer-page {
+  padding-top: 10em;
 }
-
-.page-footer h3 {
-  font-size: 1.4em;
-}
-
-.footer__text, .footer__contact {
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} 
 
 .content-wrap {
   max-width: 1080px;
@@ -158,40 +165,21 @@ textarea {
   padding: 0 1em;
 }
 
-.text--bold {
-  font-family: "avenirBold", sans-serif;
-}
+/*
 
-.hero {
-  background-image: url('./../../assets/images/hero.jpg');
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding: 20em 0;
-  color: var(--color-bg-light);
-  text-shadow: 0 0 1em var(--color-text);
-}
+  HEADER
 
-.hero__title {
-  font-family: 'Bungee', cursive;
-  text-transform: uppercase;
-}
-
-.hero__text {
-  font-size: 4em;
-  line-height: 1.4em;
-  max-width: 12em;
-  margin: 0 auto;
-}
+*/
 
 .header {
-  background: var(--color-bg-light);
-  border-bottom: 1px solid var(--color-shadow);
-  box-shadow: var(--border-shadow);
+  background: var(--color-bg-header);
+  /* border-bottom: 1px solid var(--color-shadow); */
+  /* box-shadow: var(--border-shadow); */
+  /* position: absolute; */
+  width: 100%;
+  top: 0;
+  position: fixed;
   z-index: 2;
-  position: relative;
 }
 
 .nav__list {
@@ -229,15 +217,81 @@ textarea {
 
 .donate-link {
   background: var(--color-accent-dark);
-  color: var(--color-bg-light);
+  color: var(--color-white);
   text-decoration: none;
   border-radius: 0.4em;
   transition: background 0.2s ease-in-out;
 }
 
 .donate-link:hover {
-  color: var(--color-bg-light);
+  color: var(--color-white);
   background: var(--color-link);
+}
+
+/*
+
+  FOOTER
+
+*/
+
+
+.social-media__ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media__ul a {
+  padding: 0.4em;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: var(--footer-height);
+}
+
+.page-footer h3 {
+  font-size: 1.4em;
+}
+
+.footer__text, .footer__contact {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} 
+
+
+/*
+
+  MAIN PAGE
+
+*/
+
+.hero {
+  background-image: url('./../../assets/images/hero.jpg');
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20em 0;
+  color: var(--color-bg-light);
+  text-shadow: 0 0 1em var(--color-text);
+}
+
+.hero__title {
+  font-family: 'Bungee', cursive;
+  text-transform: uppercase;
+}
+
+.hero__text {
+  font-size: 4em;
+  line-height: 1.4em;
+  max-width: 12em;
+  margin: 0 auto;
 }
 
 .testimonial {
@@ -268,6 +322,10 @@ textarea {
   box-shadow: var(--image-shadow);
 }
 
+.why-we-do-it__icon {
+  font-size: 10em;
+}
+
 .why-we-do-it__text {
   line-height: 1.4em;
   font-size: 2em;
@@ -275,17 +333,15 @@ textarea {
   margin: 0 auto;
 }
 
-.social-media__ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.social-media__ul a {
-  padding: 0.4em;
-}
+/*
 
-.programs {
+  PROGRAMS PAGE
+
+*/
+
+
+.program-page {
   text-align: left;
 }
 
@@ -299,6 +355,12 @@ textarea {
 .program {
   margin-bottom: 3em;
 }
+
+/*
+
+  VOLUNTEERS PAGE
+
+*/
 
 .our-mission__header {
   text-decoration: underline;
@@ -336,10 +398,16 @@ textarea {
   background: var(--color-bg-light);
   margin: 6em 0;
   padding: 6em 0;
+  text-align: left;
 }
 
 .volunteers-form {
   text-align: left;
+}
+
+.input--other {
+  width: auto;
+  display: inline-block;
 }
 
 [type="checkbox"] {
