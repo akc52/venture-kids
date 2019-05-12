@@ -44,24 +44,28 @@ body {
 h1 {
   font-size: 7.4em;
   line-height: 1.4em;
+  margin: 1em 0;
 }
 
-h2, legend {
+h2 {
   font-family: "avenirBold", sans-serif;
   font-size: 5.0em;
-  line-height: 2.0em;
+  line-height: 1.0em;
+  margin: 1em 0;
 }
 
-h3 {
+h3, legend {
   font-family: "avenirLight", sans-serif;
   font-size: 2.6em;
-  line-height: 1.6em;
+  line-height: 1.0em;
+  margin: 1em 0;
 }
 
 h4 {
   font-family: "avenirLight", sans-serif;
   font-size: 1.8em;
-  line-height: 1.8em;
+  line-height: 1.0em;
+  margin: 1em 0;
 }
 
 p {
@@ -235,12 +239,23 @@ textarea {
   background: var(--color-link);
 }
 
+.testimonial {
+  margin: 1em;
+  padding: 1em;
+  box-shadow: var(--image-shadow);
+}
+
+.testimonial__image {
+  max-width: 12em;
+  margin: 0 auto;
+}
+
 .why-we-do-it__title {
-  margin: 1em auto;
+  margin: 3em 0;
 }
 
 .why-we-do-it__article {
-  padding: 10em 0;
+  padding: 0 0 16em 0;
 }
 
 .why-we-do-it__header {
@@ -320,6 +335,10 @@ textarea {
 }
 
 @media screen and (max-width: 600px) { 
+  .nav__logo-item {
+    display: none;
+  }
+  
   .programs__image, form {
     max-width: 90%;
   }
