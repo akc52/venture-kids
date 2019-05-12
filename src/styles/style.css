@@ -1,12 +1,32 @@
+@font-face {
+  font-family: 'avenirReg';
+  src: url("./../../assets/fonts/Avenir-Roman.woff") format("woff"); 
+}
+
+@font-face {
+  font-family: 'avenirLight';
+  src: url("./../../assets/fonts/avenir_35_light.woff") format("woff"); 
+}
+
+@font-face {
+  font-family: 'avenirBold';
+  src: url("./../../assets/fonts/Avenir-bold.woff") format("woff"); 
+}
+
 :root {
+  --color-orange:#F29E38;
+  --color-red: #F24E29;
+  --color-white: #FFF;
+  --color-blue: #2E688C;
+  
   --color-bg-dark: #40302C;
-  --color-bg: #FFFFFF;
+  --color-bg: var(--color-white);
   --color-bg-light: #F2F2F2;
   --color-text: #0D0D0D;
   --color-shadow: #40302C;
-  --color-link: #2E688C;
-  --color-accent: #F29E38;
-  --color-accent-dark: #F24E29;
+  --color-link: var(--color-blue);
+  --color-accent: var(--color-orange);
+  --color-accent-dark: var(--color-red);
   --footer-height: 12em;
   --border-shadow: 0 0 0 #fff;/*0em 0em 0.4em var(--color-shadow);*/
   --image-shadow: 0 0 1em #cfcfcf;
@@ -15,7 +35,7 @@
 body {
   background: var(--color-bg);
   color: var(--color-text);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'avenirLight', sans-serif;
   font-size: 62.5%;
   line-height: 1em;
   text-align: center;
@@ -27,16 +47,19 @@ h1 {
 }
 
 h2, legend {
+  font-family: "avenirBold", sans-serif;
   font-size: 5.0em;
   line-height: 2.0em;
 }
 
 h3 {
+  font-family: "avenirLight", sans-serif;
   font-size: 2.6em;
   line-height: 1.6em;
 }
 
 h4 {
+  font-family: "avenirLight", sans-serif;
   font-size: 1.8em;
   line-height: 1.8em;
 }
@@ -64,15 +87,19 @@ time {
 }
 
 form {
-  max-width: 50em;
-  margin: 0 auto;
+  
 }
 
 label {
   /*display: none;*/
 }
 
-input, textarea {
+input[type="date"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="text"], 
+textarea {
+  font-family: 'avenirLight', sans-serif;
   display: block;
   width: 100%;
   margin-bottom: 1em;
@@ -120,8 +147,18 @@ input, textarea {
   padding: 0 1em;
 }
 
+.content-wrap--small {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.text--bold {
+  font-family: "avenirBold", sans-serif;
+}
+
 .hero {
-  background-image: url('./../../images/hero.jpg');
+  background-image: url('./../../assets/images/hero.jpg');
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -132,15 +169,15 @@ input, textarea {
   text-shadow: 0 0 1em var(--color-text);
 }
 
-.hero h1 {
+.hero__title {
   font-family: 'Bungee', cursive;
   text-transform: uppercase;
 }
 
-.hero p {
+.hero__text {
   font-size: 4em;
   line-height: 1.4em;
-  max-width: 10em;
+  max-width: 12em;
   margin: 0 auto;
 }
 
@@ -164,13 +201,16 @@ input, textarea {
   border-right: 1px solid;
 }
 
-.nav__list li:first-of-type, .nav__list li:last-of-type  {
+.nav__list li:first-of-type,
+.nav__list li:nth-last-child(2), 
+.nav__list li:last-of-type  {
   border-right: 0;
 }
 
 .nav__list a {
-  font-family: 'Bungee', cursive;
-  padding: 0.8em;
+  font-family: "avenirBold", sans-serif;
+  padding: 0.4em;
+  margin: 0.4em;
 }
 
 .nav__logo-item {
@@ -180,6 +220,19 @@ input, textarea {
 .nav__logo-item img{
   height: 2em;
   width: 2em;
+}
+
+.donate-link {
+  background: var(--color-accent-dark);
+  color: var(--color-bg-light);
+  text-decoration: none;
+  border-radius: 0.4em;
+  transition: background 0.2s ease-in-out;
+}
+
+.donate-link:hover {
+  color: var(--color-bg-light);
+  background: var(--color-link);
 }
 
 .why-we-do-it__title {
@@ -228,6 +281,34 @@ input, textarea {
 
 .program {
   margin-bottom: 3em;
+}
+
+.volunteer-chart {
+  display: flex;
+  flex-flow: wrap row;
+}
+
+.volunteer {
+  border: var(--color-bg-light);
+  flex: 1 0 25%;
+  margin: 1em;
+  padding: 1em;
+  box-shadow: var(--image-shadow);
+  position: relative;
+}
+
+.volunteer__profile-image {
+  height: auto;
+  max-width: 10em;
+  border-radius: 50%;
+}
+
+.volunteers-form {
+  text-align: left;
+}
+
+[type="checkbox"] {
+  display: inline-block;
 }
 
 [type="submit"] {
