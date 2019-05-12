@@ -22,6 +22,7 @@
   --color-bg-dark: #40302C;
   --color-bg: var(--color-white);
   --color-bg-light: #F2F2F2;
+  --color-border: var(--color-orange);
   --color-text: #0D0D0D;
   --color-shadow: #40302C;
   --color-link: var(--color-blue);
@@ -269,6 +270,7 @@ textarea {
 
 .why-we-do-it__text {
   line-height: 1.4em;
+  font-size: 2em;
   max-width: 20em;
   margin: 0 auto;
 }
@@ -298,6 +300,18 @@ textarea {
   margin-bottom: 3em;
 }
 
+.our-mission__header {
+  text-decoration: underline;
+  font-size: 3em;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.our-mission__text {
+  font-size: 4em;
+  text-align: left;
+}
+
 .volunteer-chart {
   display: flex;
   flex-flow: wrap row;
@@ -316,6 +330,12 @@ textarea {
   height: auto;
   max-width: 10em;
   border-radius: 50%;
+}
+
+.become-volunteer__section {
+  background: var(--color-bg-light);
+  margin: 6em 0;
+  padding: 6em 0;
 }
 
 .volunteers-form {
