@@ -17,16 +17,20 @@
   --color-orange:#F29E38;
   --color-red: #F24E29;
   --color-white: #FFF;
+  --color-white-off: #F2F2F2;
   --color-blue: #2E688C;
-  
+  --color-dark: #40302C;
+  --color-black: #0D0D0D;
+
   --color-bg-header: rgba(255, 255, 255, 0.9);
-  --color-bg-dark: #40302C;
+  --color-bg-light: var(--color-white-off);
+  --color-bg-dark: var(--color-dark);
   --color-bg: var(--color-white);
-  --color-bg-light: #F2F2F2;
   --color-border: var(--color-orange);
-  --color-text: #0D0D0D;
-  --color-shadow: #40302C;
+  --color-text: var(--color-black);
+  --color-shadow: var(--color-dark);
   --color-link: var(--color-blue);
+  --color-link-dark: var(--color-dark);
   --color-accent: var(--color-orange);
   --color-accent-dark: var(--color-red);
   --footer-height: 12em;
@@ -92,7 +96,7 @@ a {
 }
 
 a:hover {
-  color: var(--color-accent);
+  color: var(--color-link-dark);
 }
 
 time {
@@ -114,7 +118,7 @@ label {
 textarea {
   font-family: 'avenirLight', sans-serif;
   display: block;
-  width: 100%;
+  width: calc(100% - 0.8em);
   margin-bottom: 1em;
   padding: 0.4em;
 }
@@ -225,7 +229,7 @@ textarea {
 
 .donate-link:hover {
   color: var(--color-white);
-  background: var(--color-link);
+  background: var(--color-link-dark);
 }
 
 /*
@@ -278,7 +282,7 @@ textarea {
   display: flex;
   flex-direction: column;
   padding: 20em 0;
-  color: var(--color-bg-light);
+  color: var(--color-white-off);
   text-shadow: 0 0 1em var(--color-text);
 }
 
@@ -437,10 +441,6 @@ textarea {
     display: none;
   }
   
-  .programs__image, form {
-    max-width: 90%;
-  }
-
   .hero h1 {
     font-size: 3em;
   }
