@@ -345,6 +345,12 @@ textarea {
   text-align: left;
 }
 
+.program-icon-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
 .programs-image {
   max-width: 50em;
   margin: 4em auto;
