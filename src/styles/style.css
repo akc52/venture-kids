@@ -429,6 +429,10 @@ textarea {
 }
 
 @media screen and (max-width: 600px) { 
+  .nav__list {
+    font-size: 1.0em;
+  }
+  
   .nav__logo-item {
     display: none;
   }
@@ -463,4 +467,10 @@ textarea {
     flex-direction: column;
     height: auto;
   }
+
+  .programs-image {
+    width: 100%;
+    height: auto;
+  }
+
 }
